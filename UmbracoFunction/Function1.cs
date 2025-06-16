@@ -37,7 +37,7 @@ public class Function1
         _logger.LogInformation("Form submission received:");
         _logger.LogInformation($"Name: {data.Name}");
         _logger.LogInformation($"Email: {data.Email}");
-        _logger.LogInformation($"Description: {data.Description}");
+        _logger.LogInformation($"Message: {data.Message}");
 
         var response = req.CreateResponse(HttpStatusCode.OK);
         await response.WriteStringAsync("Data logged successfully.");
@@ -48,6 +48,6 @@ public class Function1
     {
         public string Name { get; set; }
         public string Email { get; set; }
-        public string Description { get; set; }
+        public string Message { get; set; }
     }
 }
